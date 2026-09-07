@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Barista Guidebook & Calibration Log</title>
+  <title>Barista Studio 3D & Calibration SOP</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -12,21 +12,23 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   
+  <!-- Three.js CDN for 3D WebGL Canvas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
   <!-- Framer Motion CDN -->
   <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
 
   <!-- Supabase JS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-  <!-- Babel Compiler for JSX browser execution -->
+  <!-- Babel Compiler for JSX -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
 
   <script>
@@ -37,8 +39,8 @@
           fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
           colors: {
             coffee: {
-              50: '#fdf8f6', 500: '#f59e0b', 600: '#d97706',
-              800: '#451a03', 900: '#270e02', 950: '#0c0a09'
+              50: '#fffbeb', 100: '#fef3c7', 400: '#fbbf24',
+              500: '#f59e0b', 600: '#d97706', 800: '#78350f', 950: '#0c0a09'
             }
           }
         }
@@ -46,11 +48,10 @@
     }
   </script>
 </head>
-<body class="min-h-screen font-sans antialiased selection:bg-amber-500 selection:text-stone-950">
+<body class="bg-stone-950 text-stone-100 min-h-screen font-sans antialiased overflow-x-hidden selection:bg-amber-500 selection:text-stone-950">
 
   <div id="root"></div>
 
-  <!-- Load Main Application Logic -->
   <script type="text/babel" src="app.js"></script>
 </body>
 </html>
